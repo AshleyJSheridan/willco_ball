@@ -1,0 +1,75 @@
+$ballsize : 1.3em;
+
+.ball
+{
+	display: inline-block;
+	width: $ballsize;
+	height: $ballsize;
+	border-radius: 50%;
+	border: 1px solid $ball_outline;
+	position: relative;
+
+	background: -moz-radial-gradient(center, ellipse cover, $white 0%, $white 30%, transparent 31%, transparent 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, $white 0%, $white 30%, transparent 31%, transparent 100%);
+	background: radial-gradient(ellipse at center, $white 0%, $white 30%, transparent 31%, transparent 100%);
+
+	&.yellow
+	{
+		background-color: $yellow;
+	}
+	&.blue
+	{
+		background-color: $blue;
+	}
+	&.red
+	{
+		background-color: $red;
+	}
+	&.purple
+	{
+		background-color: $purple;
+	}
+	&.orange
+	{
+		background-color: $orange;
+	}
+	&.green
+	{
+		background-color: $green;
+	}
+	&.brown
+	{
+		background-color: $brown;
+	}
+	&.black
+	{
+		background-color: $black;
+	}
+	&.white
+	{
+		background: $white;
+	}
+	&.stripe
+	{
+		background-image: -moz-linear-gradient(top, $white 0%, $white 20%, transparent 20%, transparent 80%, $white 80%, $white 100%);
+		background-image: -webkit-linear-gradient(top, $white 0%, $white 20%, transparent 20%, transparent 80%, $white 80%, $white 100%);
+		background-image: linear-gradient(to bottom, $white 0%, $white 20%, transparent 20%, transparent 80%, $white 80%, $white 100%);
+	}
+
+	&:after
+	{
+		content: "";
+		display: block;
+		position: absolute;
+		left: 5%;
+		top: 0;
+		width: 1em;
+		height: 1em;
+		background-color: pink;
+		border-radius: 50%;
+
+		background: -moz-radial-gradient(center, ellipse cover, $highlight 0%, transparent 100%);
+		background: -webkit-radial-gradient(center, ellipse cover, $highlight 0%, transparent 100%);
+		background: radial-gradient(ellipse at center, $highlight 0%, transparent 100%);
+	}
+}

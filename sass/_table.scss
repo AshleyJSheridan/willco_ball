@@ -1,0 +1,62 @@
+$table_width : 800px;
+
+.table
+{
+	background-color: $table;
+	border: 1em solid $table;
+	outline: 1.5em solid $brown;
+	width: $table_width;
+	margin: 3em;
+	position: relative;
+	padding: 1em;
+	box-shadow: inset 0 0 25px 0 rgba(50, 50, 50, .5);
+	color: $text;
+
+	.pockets
+	{
+		position: absolute;
+		left: -2.5em;
+		top: -2.5em;
+		width: 3em;
+		height: 3em;
+		background-color: $pocket_housing;
+		box-shadow: $table_width + 75px 0 0 0 $pocket_housing;
+
+		&::after
+		{
+			content: "";
+			position: absolute;
+			background-color: $black;
+			width: 2.5em;
+			height: 2.5em;
+			border-radius: 50%;
+			right: -0.5em;
+			bottom: -0.5em;
+
+			box-shadow: $table_width + 50px 0 0 0 $black;
+		}
+
+		&.middle
+		{
+			top: 50%;
+			margin-top: -1em;
+
+			&::after
+			{
+				bottom: inherit;
+				top: .25em;
+			}
+		}
+		&.bottom
+		{
+			top: inherit;
+			bottom: -2.5em;
+
+			&::after
+			{
+				bottom: inherit;
+				top: -0.5em;
+			}
+		}
+	}
+}
